@@ -1,1 +1,52 @@
 @media(max-width: 1600px)
+  .btn:not(.btn-sm)
+    p
+      width: 340px
+      height: 90px
+      font-size: 18px
+    span
+      width: 90px
+      height: 90px
+
+  .header
+    padding: 25px 0
+
+  .hero
+    height: 825px
+    padding-top: 120px
+    &-title
+      font-size: 90px
+      width: 970px
+      margin: 0 auto
+      img
+        border-width: 4px
+        height: 74px
+    &-buttons
+      padding: 34px 38px
+      gap: 26px
+      width: 882px
+      margin-top: 185px
+    &-baths
+      &__item
+        &:nth-child(1)
+          .hero-baths__btn
+            top: 130px
+            left: 580px
+          img
+            width: 990px
+        &:nth-child(2)
+          top: 65px
+          left: -810px
+          img
+            width: 986px
+          .hero-baths__btn
+            top: 110px
+            right: 55px
+        &:nth-child(3)
+          top: 50px
+          right: -700px
+          img
+            width: 915px
+          .hero-baths__btn
+            top: 130px
+            left: 160px
