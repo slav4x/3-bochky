@@ -1,0 +1,54 @@
+.header
+  background: #fff
+  padding: 30px 0
+  .container
+    @include flexbox
+    justify-content: space-between
+    align-items: center
+  &-logo
+    @include flexbox
+    align-items: center
+    gap: 15px
+    img
+      height: 48px
+    p
+      font-size: 20px
+      line-height: 1.2
+      text-transform: uppercase
+      color: #abb7ab
+      margin-top: 8px
+  &-nav
+    @include flexbox
+    align-items: center
+    gap: 65px
+    line-height: 1.2
+    font-size: 20px
+  &-contact
+    @include flexbox
+    flex-direction: column
+    align-items: flex-end
+    a
+      font-size: 18px
+      line-height: 24px
+      @include flexbox
+      align-items: center
+      gap: 5px
+      &::before
+        content: ''
+        display: block
+        width: 16px
+        height: 16px
+        background: url(../img/svg/phone.svg) no-repeat center / cover
+    span
+      color: var(--color-green)
+      border-bottom: 1px solid var(--color-green)
+      font-size: 16px
+      line-height: 20px
+      cursor: pointer
+  &.absolute
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    z-index: 10
+    background: transparent
