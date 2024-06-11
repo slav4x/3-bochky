@@ -1,0 +1,137 @@
+.concept
+  position: relative
+  z-index: 5
+  background: #fff
+  padding: 120px 0 0
+  border-top-left-radius: var(--big-radius)
+  border-top-right-radius: var(--big-radius)
+  margin-top: -45px
+  .container
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 560px
+      background: linear-gradient(rgba(255,255,255,0), #fff)
+      z-index: -1
+  &-grid
+    position: absolute
+    z-index: -1
+    top: -120px
+    left: 0
+    right: 0
+    bottom: -120px
+    border-left: 3px solid #B1B1B1
+    border-right: 3px solid #B1B1B1
+    @include flexbox
+    justify-content: space-evenly
+    opacity: 0.25
+    &::before, &::after
+      content: ''
+      display: block
+      height: 100%
+      width: 3px
+      background: #b1b1b1
+  .title
+    max-width: 700px
+    img
+      display: inline-block
+      vertical-align: middle
+      margin: 0 15px
+  &-row
+    @include flexbox
+    align-items: flex-start
+  &-bath
+    max-width: 375px
+    line-height: 1.35
+    margin-left: auto
+    p
+      font-weight: 500
+    b
+      font-weight: 700
+      display: block
+      margin-top: 40px
+    span
+      color: var(--color-green)
+  &-interview
+    max-width: 440px
+    @include flexbox
+    align-items: flex-start
+    margin-top: 100px
+    margin-bottom: 140px
+    h3
+      font-size: 150px
+      line-height: 1.2
+      color: var(--color-light-green)
+      font-weight: 400
+      font-family: 'Neutral Face'
+    p
+      font-weight: 500
+      line-height: 1.35
+      width: 100%
+    img
+      margin-top: 97px
+      margin-left: 20px
+  &-gallery
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 12px
+    width: calc(100% - 375px - 40px)
+    max-width: 720px
+    margin-right: auto
+    margin-top: 30px
+    img
+      width: 100%
+      height: 345px
+      object-fit: cover
+      object-position: center
+      border-radius: 35px
+  &-types
+    max-width: 375px
+    @include flexbox
+    align-items: flex-start
+    h3
+      font-size: 150px
+      line-height: 1.2
+      color: var(--color-light-green)
+      font-weight: 400
+      font-family: 'Neutral Face'
+    p
+      font-weight: 500
+      line-height: 1.35
+      width: 100%
+    img
+      margin-top: 97px
+      margin-left: 20px
+  &-bochky
+    max-width: 375px
+    @include flexbox
+    align-items: flex-start
+    margin-top: 110px
+    h3
+      font-size: 150px
+      line-height: 1.2
+      color: var(--color-light-green)
+      font-weight: 400
+      font-family: 'Neutral Face'
+    h4
+      font-size: 45px
+      line-height: 1.2
+      color: var(--color-light-green)
+      font-weight: 400
+      font-family: 'Neutral Face'
+      margin-left: 10px
+      margin-top: 52px
+    p
+      font-weight: 500
+      line-height: 1.35
+      width: 100%
+    img
+      margin-top: 97px
+      margin-left: 20px
+  .btn
+    margin-top: auto
+    margin-left: 130px
+    margin-bottom: 10px
