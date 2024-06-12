@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const maskOptions = {
     mask: '+7 (000) 000-00-00',
-    lazy: false,
-    placeholderChar: '_',
+    // lazy: false,
+    // placeholderChar: '_',
     onFocus: function () {
       if (this.value === '') this.value = '+7 ';
     },
