@@ -72,4 +72,13 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  if (document.querySelector('.item')) {
+    const itemText = document.querySelector('.item-description__text');
+    const itemMore = document.querySelector('.item-description__more');
+    itemMore.addEventListener('click', function () {
+      itemText.classList.toggle('open');
+      itemMore.classList.toggle('open');
+    });
+  }
 });

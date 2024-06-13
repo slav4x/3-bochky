@@ -1,0 +1,91 @@
+{% extends 'components/_layout.html' %}
+{% set site_title = 'Страница бани' %}
+
+{% block content %}
+
+<section class="item">
+  <div class="container">
+    <h2 class="title">Баня-бочка «комфорт»</h2>
+    <div class="item-grid">
+      <div class="item-gallery">
+        <a href="img/gallery-1.jpg" data-fancybox><img src="img/gallery-1.jpg" alt=""></a>
+        <a href="img/gallery-1.jpg" data-fancybox><img src="img/gallery-1.jpg" alt=""></a>
+        <a href="img/gallery-1.jpg" data-fancybox><img src="img/gallery-1.jpg" alt=""></a>
+      </div>
+      <div class="item-info">
+        <ul class="item-spec">
+          <li>
+            <p>Кол-во помещений</p>
+            <span>2</span>
+          </li>
+          <li>
+            <p>Длина парной</p>
+            <span>1800 мм</span>
+          </li>
+          <li>
+            <p>Длина комнаты отдыха</p>
+            <span>1900 мм</span>
+          </li>
+          <li>
+            <p>Общая длина</p>
+            <span>4529 мм</span>
+          </li>
+          <li>
+            <p>Диаметр</p>
+            <span>2.15 м</span>
+          </li>
+          <li>
+            <p>Гарантия</p>
+            <span>12 мес.</span>
+          </li>
+        </ul>
+        <h4 class="item-price">249.990₽</h4>
+        <a href="#" class="btn btn-green"><p>оставить заявку</p><span></span></a>
+      </div>
+    </div>
+    <div class="item-description">
+      <h3>Описание:</h3>
+      <div class="item-description__text">
+        <p>Представьте: заходите вы в баню, а там вас встречает аромат кедра, мягкий свет льется сквозь панорамное окно, а печь Grill'D Aurora уже потрескивает, обещая настоящий жар. Эта баня – не просто место для отдыха, это настоящий оазис комфорта, созданный для ценителей традиций и современных технологий.</p>
+        <p>Ее сердце – печь Grill'D Aurora 160 Long, которая не только подарит вам идеальный пар, но и согреет уютную комнату отдыха своим каминным теплом. Просторные полки из липы, мягкий свет и аромат дерева создают атмосферу, в которой хочется забыть обо всех заботах и просто наслаждаться моментом.</p>
+        <p>А после парной вас ждет прохлада комнаты отдыха, где можно расслабиться на удобных полках с чашкой ароматного чая. Большое окно наполняет комнату естественным светом, а стильный стол приглашает к приятной беседе.</p>
+        <p>Каждая деталь этой бани продумана до мелочей: от надежного каркаса из ели или кедра до прочной кровли из гибкой черепицы Döcke PIE. А стильная отделка антисептиком цвета махагон придает ей особый шарм.</p>
+        <p>Это не просто баня – это воплощение комфорта и уюта, где каждая деталь создана для вашего удовольствия.</p>
+      </div>
+      <div class="item-description__more"><span>Читать далее</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="item-optional">
+  <div class="container">
+    <h2 class="title">доп. опции</h2>
+    <div class="item-optional__card">
+      <img src="img/optional-1.jpg" alt="">
+      <span>
+        <p>Сделать баню квадратной формы </p>
+        <b>+30.000₽</b>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="item-others">
+  <div class="container">
+    <h2 class="title">посмотрите<br> другие варианты</h2>
+    <div class="item-others__grid">
+      <a href="#" class="item-others__card">
+        <img src="img/bath-item-1.jpg" alt="">
+        <p>комфорт +</p>
+      </a>
+      <a href="#" class="item-others__card">
+        <img src="img/bath-item-1.jpg" alt="">
+        <p>комфорт +</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% include 'components/manager.html' %}
+
+{% endblock %}
