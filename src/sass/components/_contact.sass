@@ -1,0 +1,45 @@
+.contact
+  margin-top: 80px
+  margin-bottom: 120px
+  .container
+    @include flexbox
+    align-items: flex-start
+  &-address
+    width: calc(100% - 540px)
+    padding-right: 60px
+    .title
+      margin-bottom: 15px
+  &-map
+    margin-top: 40px
+    position: relative
+    overflow: hidden
+    border-radius: 25px
+    width: 100%
+    height: 395px
+    & > iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100% !important
+      height: 100% !important
+  &-info
+    width: 540px
+    padding-left: 60px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      width: 3px
+      background: linear-gradient(180deg, #B1B1B1 60%, #FFFFFF 100%)
+      opacity: 0.25
+  &-card
+    line-height: 1.35
+    margin-top: 50px
+    b
+      font-weight: 500
+      display: block
+    p
+      margin-bottom: 15px
