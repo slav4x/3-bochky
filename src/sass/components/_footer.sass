@@ -1,0 +1,51 @@
+.footer
+  background: #e1e9e2
+  padding: 90px 0
+  border-top-left-radius: 50px
+  border-top-right-radius: 50px
+  .container
+    @include flexbox
+    align-items: flex-start
+    justify-content: space-between
+  &-contact
+    max-width: 350px
+    width: 100%
+    ul
+      margin-top: 70px
+      li
+        @include flexbox
+        align-items: center
+        margin-top: 30px
+        &:first-child
+          margin-top: 0
+        img
+          width: 28px
+        p
+          width: calc(100% - 28px)
+          padding-left: 16px
+  &-logo
+    @include flexbox
+    align-items: flex-end
+    gap: 30px
+    img
+      height: 94px
+    p
+      font-size: 40px
+      margin-bottom: 12px
+      text-transform: uppercase
+      color: #abb7ab
+  &-nav
+    li
+      margin-top: 15px
+    p
+      margin-bottom: 30px
+      color: #abb7ab
+  &-end
+    max-width: 330px
+  &-policy
+    border-bottom: 1px solid var(--color-black)
+  &-author
+    display: block
+    margin-top: 90px
+    p
+      margin-bottom: 20px
