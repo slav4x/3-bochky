@@ -1,0 +1,38 @@
+.about
+  padding: 150px 0
+  background: url(../img/about-bg.jpg) no-repeat center / cover
+  color: #fff
+  overflow: hidden
+  .title
+    max-width: 620px
+  p
+    max-width: 380px
+    margin-top: 50px
+    font-weight: 500
+    line-height: 1.35
+  &-grid
+    position: absolute
+    z-index: -1
+    top: -150px
+    left: 0
+    right: 0
+    bottom: -150px
+    border-left: 3px solid #fff
+    border-right: 3px solid #fff
+    @include flexbox
+    justify-content: space-evenly
+    opacity: 0.25
+    &::before, &::after
+      content: ''
+      display: block
+      height: 100%
+      width: 3px
+      background: #fff
+    span
+      height: 3px
+      position: absolute
+      left: -2000px
+      right: -2000px
+      background: #fff
+      top: 50%
+      transform: translateY(-50%)
