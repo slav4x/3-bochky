@@ -1,0 +1,49 @@
+.faq
+  padding: 120px 0
+  .container
+    @include flexbox
+    align-items: flex-start
+  &-left
+    max-width: 420px
+    p
+      color: #707070
+      margin-top: 30px
+      max-width: 380px
+      a
+        color: var(--color-green)
+        border-bottom: 1px solid var(--color-green)
+  &-list
+    margin-left: auto
+    max-width: 670px
+  &-item
+    border-bottom: 2px solid #DEDEDE
+    padding: 20px
+    &.open
+      .faq-title::before
+        transform: rotate(45deg)
+      .faq-content
+        max-height: 500px
+  &-title
+    padding: 20px 52px 20px 0
+    cursor: pointer
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      margin: auto 0
+      background: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 1L17 33' stroke='%230A0A0A' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 17L33 17' stroke='%230A0A0A' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A") no-repeat center
+      width: 34px
+      height: 34px
+      transition: .2s
+  &-content
+    max-height: 0
+    overflow: hidden
+    transition: .6s
+  &-text
+    font-size: 20px
+    line-height: 1.5
+    color: #707070
+    padding-bottom: 20px

@@ -62,4 +62,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     reviewsSlider.mount();
   }
+
+  const faq = document.querySelector('.faq');
+  if (faq) {
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach((item) => {
+      item.addEventListener('click', function () {
+        item.classList.toggle('open');
+      });
+    });
+  }
 });
