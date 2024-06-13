@@ -187,4 +187,22 @@
   </div>
 </section>
 
+<section class="reviews">
+  <div class="container">
+    <h2 class="title">Более 100<br> реальных отзывов</h2>
+    <h3>Посмотрите, что о нас говорят наши клиенты</h3>
+    <div class="splide reviews-slider">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">{% include 'components/reviews-item.html' %}</li>
+          <li class="splide__slide">{% include 'components/reviews-item.html' %}</li>
+          <li class="splide__slide">{% include 'components/reviews-item.html' %}</li>
+          <li class="splide__slide">{% include 'components/reviews-item.html' %}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="reviews-btn"><a href="#" class="btn btn-green"><p>Выбрать баню</p><span></span></a></div>
+  </div>
+</section>
+
 {% endblock %}

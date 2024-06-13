@@ -1,0 +1,89 @@
+.reviews
+  padding-top: 70px
+  .title
+    text-align: center
+    margin-bottom: 20px
+  h3
+    font-weight: 400
+    text-align: center
+    font-size: 30px
+    margin-bottom: 60px
+  &-btn
+    @include flexbox
+    align-items: center
+    justify-content: center
+    margin-top: 40px
+  &-item
+    background: #e2e9e2
+    border-radius: 35px
+    padding: 40px 50px
+    @include flexbox
+    align-items: flex-start
+    &__photos
+      max-width: 520px
+      width: 100%
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 20px
+      img
+        width: 100%
+        height: 330px
+        border-radius: 17px
+        object-fit: cover
+        object-position: center
+    &__content
+      width: calc(100% - 520px - 60px)
+      margin-left: auto
+    &__author
+      @include flexbox
+      align-items: center
+      gap: 20px
+      img
+        width: 70px
+        height: 70px
+        border-radius: 100%
+        object-fit: cover
+        object-position: center
+      b
+        font-size: 20px
+        font-weight: 500
+    &__text
+      margin-top: 15px
+      opacity: 0.7
+      font-size: 20px
+      line-height: 1.4
+      p
+        margin-top: 15px
+        &:first-child
+          margin-top: 0
+
+// .splide__slide
+//   height: 100%
+.splide__arrow
+  background: #fff
+  opacity: 1 !important
+  width: 70px
+  height: 70px
+  bottom: 30px
+  border: 3px solid #e2e9e2
+  top: calc(50% - 15px)
+  transform: translateY(calc((50% - 15px) * -1px))
+  svg
+    width: 14px
+    fill: var(--color-green)
+  &--prev
+    left: -35px
+  &--next
+    right: -35px
+
+.splide__track
+  overflow: inherit
+.splide__pagination
+  position: relative
+  bottom: 0
+.splide__pagination__page
+  background: #e2e9e2
+  opacity: 1
+.splide__pagination__page.is-active
+  background: var(--color-green)
+  transform: none
