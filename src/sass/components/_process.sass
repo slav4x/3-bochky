@@ -1,0 +1,55 @@
+.process
+  padding: 80px 0
+  counter-reset: item
+  .title
+    text-align: center
+    max-width: 950px
+    margin: 0 auto 80px
+    span
+      color: #b3beb3
+  &-item
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 120px
+    counter-increment: item
+    &__image
+      width: 550px
+      height: 420px
+      object-fit: cover
+      object-position: center
+      border-radius: 25px
+      order: 1
+    &__text
+      width: calc(100% - 550px - 55px)
+      max-width: 550px
+      h3
+        font-size: 40px
+        font-weight: 500
+        line-height: 1.2
+        max-width: 460px
+        padding-left: 120px
+        position: relative
+        &::before
+          content: '0' counter(item)
+          position: absolute
+          top: 0
+          left: 0
+          bottom: 0
+          margin: auto 0
+          font-size: 75px
+          font-family: 'Neutral Face'
+          font-weight: 400
+          color: #b3beb3
+      ul
+        list-style-type: disc
+        padding-left: 27px
+        margin-top: 30px
+        line-height: 1.35
+        font-size: 25px
+        max-width: 460px
+    &:nth-child(2n)
+      .process-item__image
+        order: -1
+    &:last-child
+      margin-bottom: 0
