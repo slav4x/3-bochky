@@ -81,4 +81,11 @@ document.addEventListener('DOMContentLoaded', function () {
       itemMore.classList.toggle('open');
     });
   }
+
+  const burger = document.querySelector('.header-burger');
+  const nav = document.querySelector('.header-nav');
+  burger.addEventListener('click', function () {
+    nav.classList.toggle('open');
+    burger.classList.toggle('open');
+  });
 });
