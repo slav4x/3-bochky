@@ -1,3 +1,245 @@
 @media(max-width: 1023px)
   .container
     max-width: 768px
+
+  body
+    font-size: 22px
+
+  .header-nav
+    display: none
+
+  .hero
+    height: 1280px
+  .header-contact
+    margin-left: 24px
+  .header-contact span
+    display: none
+  .header-contact a
+    font-size: 0
+    gap: 0
+    &::before
+      width: 24px
+      height: 24px
+  .header-burger
+    width: 48px
+    display: block
+    height: 24px
+    background: #000
+
+  .hero .container
+    @include flexbox
+    flex-direction: column
+    align-items: center
+  .hero-title
+    width: 100%
+    img
+      display: none
+  .hero-buttons
+    margin-top: 50px
+    padding: 0
+    background: transparent
+    backdrop-filter: none
+    flex-direction: column
+    max-width: 520px
+    position: relative
+    z-index: 10
+    .btn
+      width: 100%
+      p
+        flex: 1
+    .btn-white
+      p
+        background: transparent
+        border: 2px solid var(--color-green)
+        color: var(--color-green)
+
+  .hero-baths__item:nth-child(1)
+    top: 120px
+    img
+      width: 790px
+    .hero-baths__btn
+      top: 160px
+      left: 380px
+  .hero-baths__item:nth-child(2)
+    top: -5px
+    left: initial
+    right: 390px
+    img
+      width: 750px
+    .hero-baths__btn
+      top: 55px
+      right: 70px
+  .hero-baths__item:nth-child(3)
+    top: 25px
+    right: initial
+    left: 390px
+    img
+      width: 535px
+    .hero-baths__btn
+      top: 40px
+      left: 70px
+  .hero-baths
+    width: 100%
+    order: 1
+    margin-top: 40px
+  .hero-baths__btn
+    display: block
+
+  .concept-bath
+    margin-top: 60px
+
+  .concept-types
+    width: 315px
+    margin-right: 40px
+  .concept-gallery
+    width: calc(100% - 315px - 40px - 30px)
+    gap: 8px
+    img
+      border-radius: 20px
+
+  .concept-bochky
+    max-width: 300px
+  .concept .btn
+    display: none
+
+  .bath
+    padding-top: 120px
+  .bath .title img
+    display: none
+
+  .bath-item
+    height: auto
+    border-radius: 0
+    overflow: initial
+    padding: 0 25px 25px
+    @include flexbox
+    flex-direction: column
+    align-items: flex-start
+    img
+      position: relative
+      border-radius: 25px
+      height: 370px
+      max-width: initial
+      width: calc(100% + 50px)
+      margin-left: -25px
+      margin-right: -25px
+    &::before
+      background: transparent
+      border-radius: 25px
+      border: 2px solid #E1E1E1
+      z-index: -10
+    .btn-white
+      display: none
+    .btn-green
+      display: flex
+  .bath-item__info h3
+    color: var(--color-black)
+    font-size: 50px
+    margin-top: 25px
+    margin-bottom: 15px
+  .bath-item__info h4
+    color: var(--color-black)
+    margin-bottom: 20px
+  .bath-item__spec
+    padding: 0
+    width: 100%
+    margin-bottom: 20px
+
+  .manager
+    padding-bottom: 500px
+    overflow: hidden
+  .manager-form
+    margin: 0 auto
+    text-align: center
+  .manager-photo
+    top: calc(100% + 40px)
+    left: 50%
+    transform: translateX(-50%)
+    width: 530px
+  .manager-info
+    top: calc(100% + 100px)
+    left: 50%
+    transform: translateX(-50%)
+    text-align: left
+    margin-left: 180px
+
+  .create-head .title
+    margin: 0 auto
+    text-align: center
+  .create-head h3
+    display: none
+  .create-grid
+    grid-template-columns: repeat(1, 1fr)
+    gap: 20px
+  .create-col
+    gap: 20px
+  .create-item
+    flex-direction: row
+    padding: 40px
+    h4, p
+      width: 50%
+      max-width: 100%
+    h4
+      font-size: 30px
+    p
+      font-size: 20px
+  .create-item h5
+    margin-top: 20px
+    width: 50%
+  .create-item-1
+    height: 490px
+    background-size: auto 345px
+
+  .reviews-item__photos
+    max-width: 350px
+    img
+      height: 220px
+  .reviews-item__content
+    width: 100%
+    margin-left: 0
+    margin-bottom: 30px
+    order: -1
+
+  .faq
+    padding-bottom: 80px
+  .faq-left
+    max-width: 580px
+    width: 100%
+    text-align: center
+    @include flexbox
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+    h2, p
+      max-width: 100%
+      br
+        display: none
+  .faq-list
+    max-width: 100%
+    width: 100%
+    margin-left: 0
+    margin-top: 60px
+  .faq-item
+    padding-top: 0
+    padding-bottom: 0
+  .faq-text
+    font-size: 15px
+
+  .footer-logo
+    gap: 20px
+  .footer-logo img
+    height: 54px
+  .footer-logo p
+    font-size: 23px
+    margin-bottom: 8px
+  .footer-contact,
+  .footer-nav
+    width: 100%
+    max-width: 280px
+  .footer-author
+    p
+      br
+        display: none
+    img
+      height: 42px
