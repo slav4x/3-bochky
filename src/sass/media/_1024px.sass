@@ -243,3 +243,19 @@
         display: none
     img
       height: 42px
+
+  .contact-address, .contact-info
+    width: 100%
+    padding: 0
+  .contact-info
+    margin-top: 60px
+    @include flexbox
+    align-items: flex-start
+    &::before
+      display: none
+    .title
+      width: 100%
+  .contact-card
+    width: 50%
+  .contact
+    margin-top: 40px
