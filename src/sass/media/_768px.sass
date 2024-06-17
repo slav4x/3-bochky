@@ -29,23 +29,35 @@
   .hero
     padding-top: 110px
     height: 890px
+    &::before
+      width: 430px
+      height: 1530px
+      top: 110px
   .hero-title
     font-size: 50px
     max-width: 100%
+    line-height: 1.3
+    margin-top: -7px
   .hero-buttons
-    margin-top: 30px
+    margin-top: 27px
     width: 100%
+    max-width: 360px
+    gap: 14px
 
   .hero-baths__btn
     display: none
-  .hero-baths__item:nth-child(1) img
-    width: 640px
+  .hero-baths__item:nth-child(1)
+    top: 85px
+    img
+      width: 640px
   .hero-baths__item:nth-child(2)
-    right: 210px
+    top: 6px
+    right: 221px
     img
       width: 600px
   .hero-baths__item:nth-child(3)
-    left: 200px
+    top: 26px
+    left: 210px
     img
       width: 430px
   .hero-baths
@@ -53,6 +65,16 @@
     width: 390px
     margin-left: auto
     margin-right: auto
+    &::before
+      content: ''
+      position: absolute
+      top: 62px
+      left: 0
+      right: 12px
+      margin: 0 auto
+      width: 36px
+      height: 58px
+      background-image: url("data:image/svg+xml,%3Csvg width='36' height='58' viewBox='0 0 36 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='35' height='57' rx='17.5' stroke='%23B3BEB3'/%3E%3Crect x='16.2852' y='10.2358' width='3.42857' height='7.67647' rx='1.71429' fill='%23B3BEB3'/%3E%3Crect x='16.2852' y='21.3237' width='3.42857' height='7.67647' rx='1.71429' fill='%23D9D9D9' fill-opacity='0.66'/%3E%3Crect x='16.2852' y='32.4121' width='3.42857' height='7.67647' rx='1.71429' fill='%23D9D9D9' fill-opacity='0.22'/%3E%3C/svg%3E%0A")
 
   .concept-grid
     display: none
@@ -60,15 +82,29 @@
   .title
     font-size: 40px
 
+  .concept
+    padding-top: 28px
   .concept .title
     text-align: center
     max-width: 390px
     margin: 0 auto
+    line-height: 1.3
     img
       height: 42px
   .concept-bath
-    margin: 20px auto 0
+    margin: 25px auto 0
     text-align: center
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      bottom: -150px
+      left: 0
+      right: 0
+      margin: 0 auto
+      width: 12px
+      height: 130px
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='130' viewBox='0 0 12 130' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 120.076L5.99999 130L-5.31345e-06 120.076L4.96076 120.076L4.96077 -3.07692e-07L7.03923 -2.1684e-07L7.03923 120.076L12 120.076Z' fill='%23E6E6E6'/%3E%3C/svg%3E%0A")
     br
       display: none
   .concept-bath b
@@ -85,12 +121,28 @@
     justify-content: center
     margin-top: 40px
 
+  .concept-interview
+    margin-top: 166px
+  .concept-types
+    margin-top: 57px
+  .concept-bochky
+    margin-top: 63px
+    h3, h4, img
+      display: none
+    p
+      padding: 0 15px
+      margin-top: 14px
+    &__image
+      display: block !important
+      height: 94px !important
+      margin: 0 auto !important
+
   .concept-gallery
     display: none
   .concept .btn
     display: flex
-    margin: 40px auto 0
-    max-width: 420px
+    margin: 34px auto 0
+    max-width: 360px
     p
       flex: 1
 
@@ -101,28 +153,145 @@
   .bath-item__info h3
     font-size: 40px
     margin-bottom: 10px
+    margin-top: 17px
   .bath-item__info h4
     font-size: 30px
   .bath-item .btn p
     flex: 1
   .bath-item__spec
     font-size: 18px
+  .bath-item__spec li span
+    width: calc(100% - 150px - 100px)
+  .bath-item
+    margin-bottom: 40px
+    .btn-green
+      margin: 5px -10px 0
 
+  .manager
+    padding-top: 58px
+    padding-bottom: 420px
+  .manager-form h4
+    font-size: 20px
+    max-width: 260px
+    line-height: 1.3
+    margin: 17px auto 23px
   .manager-photo
     width: 340px
+    top: calc(100% + 19px)
   .manager-info
-    top: calc(100% + 300px)
-    margin-left: -40px
+    top: calc(100% + 292px)
+    margin-left: -30px
+  .manager-form form
+    max-width: 360px
+    margin: 0 auto
+  .manager-form form .input
+    margin-bottom: 14px
+  .manager-form .btn p
+    flex: 1
+  .manager-info b
+    font-size: 22px
+  .manager-info
+    p
+      font-size: 15px
 
+  .input
+    padding: 0 34px
+
+  .create
+    padding: 43px 0 45px
+  .create-item h5
+    width: auto
+    font-size: 20px
+    margin-top: -4px
   .create-item h4
     font-size: 20px
     width: 100%
+    line-height: 1.3
+    margin-bottom: 13px
   .create-item p
     font-size: 18px
     width: 100%
   .create-item
     flex-direction: column
     padding: 35px
+    padding-right: 25px
+  .create-grid
+    margin-top: 32px
+    @include flexbox
+    flex-direction: column
+    align-items: flex-start
+  .create-col
+    &:nth-child(1)
+      .create-item-1
+        order: 2
+    &:nth-child(2)
+      order: -1
+    &:nth-child(3)
+      order: -2
+  .create-item-5
+    height: 590px
+    h4
+      max-width: 250px
+  .create-item-1
+    height: 400px
+    background-size: auto 240px
+    p
+      padding-right: 40px
+
+  .reviews
+    padding-top: 55px
+  .reviews h3
+    display: none
+  .reviews-slider
+    margin: 0 10px
+    .splide__arrow
+      width: 52px
+      height: 52px
+      border: 2px solid #e2e9e2
+      svg
+        width: 14px
+        fill: var(--color-green)
+      &--prev
+        left: -30px
+      &--next
+        right: -30px
+  .reviews-item
+    padding: 25px 15px
+  .reviews-item__content
+    padding: 0 15px
+    margin-bottom: 20px
+  .reviews-item__text
+    font-size: 18px
+    margin-top: 18px
+  .reviews-item__author img
+    width: 70px
+    height: 70px
+  .reviews-item__author b
+    font-size: 18px
+  .reviews-btn
+    max-width: 360px
+    margin: 25px auto 0
+    .btn p
+      flex: 1
+
+  .faq
+    padding-top: 67px
+  .faq-left h2 br
+    display: block
+  .faq-left p
+    max-width: 300px
+    line-height: 1.3
+    margin-top: 28px
+    &:last-child
+      margin-top: 11px
+  .faq-list
+    margin-top: 30px
+  .faq-item
+    padding-left: 7px
+  .faq-title::before
+    width: 24px
+    height: 24px
+    background-size: cover
 
   .footer-nav
     max-width: 100%
