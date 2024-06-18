@@ -220,4 +220,37 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   clearUtmParamsIfExpired();
+
+  document.querySelectorAll('.item-optional__card').forEach((card) => {
+    card.addEventListener('click', () => {
+      const id = card.getAttribute('data-id');
+      const isActive = card.classList.contains('active');
+
+      document.querySelectorAll('.item-optional__card, .item-gallery, .item-price').forEach((item) => {
+        item.classList.remove('active');
+      });
+
+      if (!isActive) {
+        document
+          .querySelectorAll(`.item-optional__card[data-id="${id}"], .item-gallery[data-id="${id}"], .item-price[data-id="${id}"]`)
+          .forEach((item) => {
+            item.classList.add('active');
+          });
+      } else {
+        document
+          .querySelectorAll(`.item-optional__card[data-id="0"], .item-gallery[data-id="0"], .item-price[data-id="0"]`)
+          .forEach((item) => {
+            item.classList.add('active');
+          });
+      }
+
+      const activeCard = document.querySelector(`.item-optional__card.active`);
+      const title = activeCard ? activeCard.getAttribute('data-title') : '';
+
+      const fancyboxLink = document.querySelector('.item-info a[data-fancybox][data-src="#popup-call"]');
+      if (fancyboxLink) {
+        fancyboxLink.setAttribute('data-form', `Оставить заявку - ${title}`);
+      }
+    });
+  });
 });

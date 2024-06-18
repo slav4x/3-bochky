@@ -7,7 +7,17 @@
   <div class="container">
     <h2 class="title">Баня-бочка «комфорт»</h2>
     <div class="item-grid">
-      <div class="item-gallery">
+      <div class="item-gallery active" data-id="0">
+        <a href="img/gallery-1.jpg" data-fancybox><img src="img/gallery-1.jpg" alt=""></a>
+        <a href="img/gallery-1.jpg" data-fancybox><img src="img/gallery-1.jpg" alt=""></a>
+        <a href="img/gallery-1.jpg" data-fancybox><img src="img/gallery-1.jpg" alt=""></a>
+      </div>
+      <div class="item-gallery" data-id="1">
+        <a href="img/gallery-1.jpg" data-fancybox><img src="img/gallery-1.jpg" alt=""></a>
+        <a href="img/gallery-1.jpg" data-fancybox><img src="img/gallery-1.jpg" alt=""></a>
+        <a href="img/gallery-1.jpg" data-fancybox><img src="img/gallery-1.jpg" alt=""></a>
+      </div>
+      <div class="item-gallery" data-id="2">
         <a href="img/gallery-1.jpg" data-fancybox><img src="img/gallery-1.jpg" alt=""></a>
         <a href="img/gallery-1.jpg" data-fancybox><img src="img/gallery-1.jpg" alt=""></a>
         <a href="img/gallery-1.jpg" data-fancybox><img src="img/gallery-1.jpg" alt=""></a>
@@ -39,7 +49,9 @@
             <span>12 мес.</span>
           </li>
         </ul>
-        <h4 class="item-price">249.990₽</h4>
+        <h4 class="item-price active" data-id="0">249.990₽</h4>
+        <h4 class="item-price" data-id="1">259.990₽</h4>
+        <h4 class="item-price" data-id="2">269.990₽</h4>
         <a href="javascript:;" data-fancybox data-src="#popup-call" data-form="Оставить заявку -" data-title="Оставить заявку" class="btn btn-green"><p>оставить заявку</p><span></span></a>
       </div>
     </div>
@@ -60,11 +72,19 @@
 <section class="item-optional">
   <div class="container">
     <h2 class="title">доп. опции</h2>
-    <div class="item-optional__card">
+    <div class="item-optional__card active" data-title="Баня-бочка «комфорт»" data-id="0"></div>
+    <div class="item-optional__card" data-title="Баня-бочка «комфорт» + Сделать баню квадратной формы" data-id="1">
       <img src="img/optional-1.jpg" alt="">
       <span>
-        <p>Сделать баню квадратной формы </p>
+        <p>Сделать баню квадратной формы</p>
         <b>+30.000₽</b>
+      </span>
+    </div>
+    <div class="item-optional__card" data-title="Баня-бочка «комфорт» + Сделать" data-id="2">
+      <img src="img/optional-1.jpg" alt="">
+      <span>
+        <p>Сделать баню квадратной формы</p>
+        <b>-30.000₽</b>
       </span>
     </div>
   </div>
