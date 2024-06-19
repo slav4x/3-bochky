@@ -4,6 +4,31 @@
 
 {% block content %}
 
+<div class="preloader" style="--timing: 1s;">
+  <div class="preloader-logo">
+    <img src="img/svg/logo.svg" alt="">
+    <p>3 бочки</p>
+  </div>
+  <div class="preloader-text">3 идеальные<br> бани-бочки</div>
+  <div class="preloader-progress">
+    <div class="preloader-line"><span></span></div>
+    <div class="preloader-percent"></div>
+  </div>
+</div>
+
+<script>
+  let element = document.querySelector('.preloader-percent');
+  let currentPercentage = 0;
+  let interval = setInterval(function() {
+    if (currentPercentage <= 100) {
+      element.textContent = currentPercentage + '%';
+      currentPercentage++;
+    } else {
+      clearInterval(interval);
+    }
+  }, 10);
+</script>
+
 <section class="hero">
   <div class="container">
     <h1 class="hero-title">
@@ -36,21 +61,21 @@
 <section class="concept">
   <div class="container">
     <div class="concept-grid"></div>
-    <div class="concept-row">
+    <div class="concept-row" data-aos="fade-up" data-aos-offset="300">
       <h2 class="title">Авторская концепция трех<img src="img/concept-3.png" loading="lazy" alt="">бань</h2>
       <div class="concept-bath">
         <p>"А что, если избавить клиента бесконечного просмотра каталогов<br> и <span>сделать 3 бани, которые будут отвечать всем запросам клиента?</span>"</p>
         <b>Мы решили провести большое исследование</b>
       </div>
     </div>
-    <div class="concept-row">
+    <div class="concept-row" data-aos="fade-up" data-aos-offset="300">
       <div class="concept-interview">
         <h3>500</h3>
         <img src="img/svg/interview.svg" alt="" loading="lazy">
         <p>За год провели более<br> 500 интервью с реальными клиентами, чтобы лучше понять основные пожелания</p>
       </div>
     </div>
-    <div class="concept-row">
+    <div class="concept-row" data-aos="fade-up" data-aos-offset="300">
       <div class="concept-gallery">
         <img src="img/concept-image-1.jpg" alt="" loading="lazy">
         <img src="img/concept-image-2.jpg" alt="" loading="lazy">
@@ -63,7 +88,7 @@
         <p>Создали более 15 разновидностей новых бань, а также провели тест-драйвы с нашими клиентами</p>
       </div>
     </div>
-    <div class="concept-row">
+    <div class="concept-row" data-aos="fade-up" data-aos-offset="300">
       <div class="concept-bochky">
         <img src="img/concept-3.png" loading="lazy" alt="" class="concept-bochky__image">
         <h3>3</h3>
@@ -78,8 +103,8 @@
 
 <section class="bath">
   <div class="container">
-    <h2 class="title">Выберите <img src="img/bath-title-1.jpg" alt="" loading="lazy"> идеальный вариант бани <img src="img/bath-title-2.jpg" alt="" loading="lazy"> <span>для себя или семьи</span></h2>
-    <div class="bath-item">
+    <h2 class="title" data-aos="fade-up" data-aos-offset="300">Выберите <img src="img/bath-title-1.jpg" alt="" loading="lazy"> идеальный вариант бани <img src="img/bath-title-2.jpg" alt="" loading="lazy"> <span>для себя или семьи</span></h2>
+    <div class="bath-item" data-aos="fade-up" data-aos-offset="300">
       <img src="img/bath-item-1.jpg" alt="" loading="lazy">
       <div class="bath-item__info">
         <h3>комфорт</h3>
@@ -102,7 +127,7 @@
       </ul>
       <a href="#" class="btn btn-green"><p>подробнее</p><span></span></a>
     </div>
-    <div class="bath-item">
+    <div class="bath-item" data-aos="fade-up" data-aos-offset="300">
       <img src="img/bath-item-2.jpg" alt="" loading="lazy">
       <div class="bath-item__info">
         <h3>комфорт +</h3>
@@ -125,7 +150,7 @@
       </ul>
       <a href="#" class="btn btn-green"><p>подробнее</p><span></span></a>
     </div>
-    <div class="bath-item">
+    <div class="bath-item" data-aos="fade-up" data-aos-offset="300">
       <img src="img/bath-item-3.jpg" alt="" loading="lazy">
       <div class="bath-item__info">
         <h3>БИЗНЕС</h3>
@@ -155,35 +180,35 @@
 
 <section class="create">
   <div class="container">
-    <div class="create-head">
+    <div class="create-head" data-aos="fade-up" data-aos-offset="300">
       <h2 class="title">Создаем бани, проработанные <span>до мелочей</span></h2>
       <h3>C заботой<br> о наших клиентах</h3>
     </div>
     <div class="create-grid">
       <div class="create-col">
-        <div class="create-item create-item-1">
+        <div class="create-item create-item-1" data-aos="fade-up" data-aos-offset="300">
           <h4>Собственное производство</h4>
           <p>Наши бани производятся профессионалами на собственных заводах</p>
         </div>
-        <div class="create-item create-item-2">
+        <div class="create-item create-item-2" data-aos="fade-up" data-aos-offset="300">
           <h4>Стоимость</h4>
           <p>Самое выгодное предложение на рынке</p>
           <h5>от 249.000₽</h5>
         </div>
       </div>
       <div class="create-col">
-        <div class="create-item create-item-3">
+        <div class="create-item create-item-3" data-aos="fade-up" data-aos-offset="300">
           <h4>Качественные материалы</h4>
           <p>Используем материалы, которые прослужат долгие годы</p>
         </div>
-        <div class="create-item create-item-4">
+        <div class="create-item create-item-4" data-aos="fade-up" data-aos-offset="300">
           <h4>Реальная гарантия</h4>
           <p>Осуществляем гарантию на все наши бани 12 месяцев</p>
           <h5>12 месяцев</h5>
         </div>
       </div>
       <div class="create-col">
-        <div class="create-item create-item-5">
+        <div class="create-item create-item-5" data-aos="fade-up" data-aos-offset="300">
           <h4>Функциональное пространство</h4>
           <p>Отдельная душевая зона, просторная зона отдыха с возможностью размещения откидного стола</p>
         </div>
@@ -194,9 +219,9 @@
 
 <section class="reviews">
   <div class="container">
-    <h2 class="title">Более 100<br> реальных отзывов</h2>
-    <h3>Посмотрите, что о нас говорят наши клиенты</h3>
-    <div class="splide reviews-slider">
+    <h2 class="title" data-aos="fade-up" data-aos-offset="300">Более 100<br> реальных отзывов</h2>
+    <h3 data-aos="fade-up" data-aos-offset="300">Посмотрите, что о нас говорят наши клиенты</h3>
+    <div class="splide reviews-slider" data-aos="fade-up" data-aos-offset="300">
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide">{% include 'components/reviews-item.html' %}</li>
@@ -206,49 +231,49 @@
         </ul>
       </div>
     </div>
-    <div class="reviews-btn"><a href="#" class="btn btn-green"><p>Выбрать баню</p><span></span></a></div>
+    <div class="reviews-btn" data-aos="fade-up" data-aos-offset="300"><a href="#" class="btn btn-green"><p>Выбрать баню</p><span></span></a></div>
   </div>
 </section>
 
 <section class="faq">
   <div class="container">
     <div class="faq-left">
-      <h2 class="title">Вопрос<br> & ответ</h2>
-      <p>Нет ответа на Ваш вопрос? Наша команда готова ответить на любые вопросы, которые у вас могут возникнуть</p>
-      <p><a href="javascript:;" data-fancybox data-src="#popup-call" data-form="Задать вопрос" data-title="Задать вопрос">задать вопрос</a></p>
+      <h2 class="title" data-aos="fade-up" data-aos-offset="300">Вопрос<br> & ответ</h2>
+      <p data-aos="fade-up" data-aos-offset="300">Нет ответа на Ваш вопрос? Наша команда готова ответить на любые вопросы, которые у вас могут возникнуть</p>
+      <p data-aos="fade-up" data-aos-offset="300"><a href="javascript:;" data-fancybox data-src="#popup-call" data-form="Задать вопрос" data-title="Задать вопрос">задать вопрос</a></p>
     </div>
     <div class="faq-list">
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-up" data-aos-offset="300">
         <div class="faq-title">Возможна ли оплата частями?</div>
         <div class="faq-content">
           <div class="faq-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor quod sint ea. Eveniet officiis voluptatum neque ab, cum, debitis nostrum nemo quis enim molestiae porro nobis provident adipisci fugit praesentium!</div>
         </div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-up" data-aos-offset="300">
         <div class="faq-title">Какой срок установки бани?</div>
         <div class="faq-content">
           <div class="faq-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor quod sint ea. Eveniet officiis voluptatum neque ab, cum, debitis nostrum nemo quis enim molestiae porro nobis provident adipisci fugit praesentium!</div>
         </div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-up" data-aos-offset="300">
         <div class="faq-title">Можно ли использовать баню-бочку зимой?</div>
         <div class="faq-content">
           <div class="faq-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor quod sint ea. Eveniet officiis voluptatum neque ab, cum, debitis nostrum nemo quis enim molestiae porro nobis provident adipisci fugit praesentium!</div>
         </div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-up" data-aos-offset="300">
         <div class="faq-title">Можно ли спать в банях-бочках?</div>
         <div class="faq-content">
           <div class="faq-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor quod sint ea. Eveniet officiis voluptatum neque ab, cum, debitis nostrum nemo quis enim molestiae porro nobis provident adipisci fugit praesentium!</div>
         </div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-up" data-aos-offset="300">
         <div class="faq-title">Можно ли мыться в банях-бочках?</div>
         <div class="faq-content">
           <div class="faq-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor quod sint ea. Eveniet officiis voluptatum neque ab, cum, debitis nostrum nemo quis enim molestiae porro nobis provident adipisci fugit praesentium!</div>
         </div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-up" data-aos-offset="300">
         <div class="faq-title">Подходит ли для маленьких участков?</div>
         <div class="faq-content">
           <div class="faq-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor quod sint ea. Eveniet officiis voluptatum neque ab, cum, debitis nostrum nemo quis enim molestiae porro nobis provident adipisci fugit praesentium!</div>
